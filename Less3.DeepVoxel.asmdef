@@ -1,0 +1,14 @@
+{
+    "name": "Less3.DeepVoxel",
+    "rootNamespace": "Less3.DeepVoxel",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

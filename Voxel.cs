@@ -8,5 +8,10 @@ namespace Less3.DeepVoxel
     public struct Voxel
     {
         public ushort id;
+
+        public Voxel(ushort id)
+        {
+            this.id = id;
+        }
     }
 }

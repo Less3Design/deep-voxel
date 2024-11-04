@@ -18,21 +18,29 @@ namespace Less3.DeepVoxel
             world = new WorldLayer();
             world.chunks = new Chunk[0];
 
-            for (int x = 0; x < 8; x++)
+            for (int x = 0; x < 4; x++)
             {
-                for (int y = 0; y < 8; y++)
+                for (int y = 0; y < 4; y++)
                 {
-                    for (int z = 0; z < 8; z++)
+                    for (int z = 0; z < 4; z++)
                     {
-                        world.LoadChunk(new Chunk(new Vector3Int(x, y, z)).Randomize());
+                        Chunk c = new Chunk(new Vector3Int(x, y, z)).Randomize();
+                        world.LoadChunk(c);
                     }
                 }
+            }
+
+            foreach (Chunk c in world.chunks)
+            {
+                GameObject g = new GameObject();
+                var cr = g.AddComponent<ChunkRenderer>();
+                cr.SetChunk(c);
             }
         }
 
         private void OnDrawGizmos()
         {
-            int i=0;
+            int i = 0;
             foreach (Chunk c in world.chunks)
             {
                 i++;
